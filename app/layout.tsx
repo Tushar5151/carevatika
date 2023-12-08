@@ -1,4 +1,3 @@
-import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Nav from "@/components/nav";
 
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en">
       <body className="bg-background text-foreground">
         <Nav />
         <main className="my-10 min-h-screen flex flex-col items-center">

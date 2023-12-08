@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 
 export default function Form() {
@@ -19,6 +20,8 @@ export default function Form() {
     if (error) {
       console.error(error);
     }
+
+    revalidatePath("/");
   };
 
   return (

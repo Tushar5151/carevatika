@@ -1,7 +1,6 @@
 import Form from "@/components/form";
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
-import Link from "next/link";
 
 export default async function Index() {
   const fetchData = async () => {
@@ -22,10 +21,12 @@ export default async function Index() {
 
   return (
     <main>
-      <Link href="add" className="bg-black text-white p-2 rounded">
-        Add
-      </Link>
+      <Form />
       <div className="mt-10 grid grid-cols-4">
+        <span className="text-lg font-semibold">Email</span>
+        <span className="text-lg font-semibold">Contact</span>
+        <span className="text-lg font-semibold">Hardware No.</span>
+        <span className="text-lg font-semibold">Micellaneous</span>
         {data!.map((row) => (
           <>
             <span>{row.email_id}</span>
