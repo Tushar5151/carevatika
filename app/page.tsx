@@ -22,7 +22,7 @@ export default async function Index() {
   return (
     <main>
       <Form />
-      <div className="mt-10 grid grid-cols-4">
+      {/* <div className="mt-10 grid grid-cols-4">
         <span className="text-lg font-semibold">Email</span>
         <span className="text-lg font-semibold">Contact</span>
         <span className="text-lg font-semibold">Hardware No.</span>
@@ -35,7 +35,7 @@ export default async function Index() {
             <span>{row.micellaneous}</span>
           </>
         ))}
-      </div>
+      </div> */}
     </main>
   );
 }
